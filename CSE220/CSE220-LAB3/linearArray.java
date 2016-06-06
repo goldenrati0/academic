@@ -6,40 +6,40 @@ public class linearArray {
         
         System.out.println("\n///// TEST 01: Copy Array example /////");
         int [] b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 } x
+        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 }
         
         System.out.println("\n///// TEST 02: Print Reverse example /////");
         printArray(a); // This Should Print: { 10, 20, 30, 40, 50, 60 }
-        printReverse(a); // This Should Print: { 60, 50, 40, 30, 20, 10 } x
+        printReverse(a); // This Should Print: { 60, 50, 40, 30, 20, 10 }
         
         
         System.out.println("\n///// TEST 03: Reverse Array example /////");
         int[] z = reverseArray(b);
-        printArray(z); // This Should Print: { 60, 50, 40, 30, 20, 10 } x
+        printArray(z); // This Should Print: { 60, 50, 40, 30, 20, 10 }
         
         
         System.out.println("\n///// TEST 04: Shift Left k cell example /////");
         b = copyArray(a, a.length);
         b = shiftLeft(b,3);
-        printArray(b); // This Should Print: { 40, 50, 60, 0, 0, 0 } x
+        printArray(b); // This Should Print: { 40, 50, 60, 0, 0, 0 }
         
         System.out.println("\n///// TEST 05: Rotate Left k cell example /////");
         b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 }
         b = rotateLeft(b,3);
-        printArray(b); // This Should Print: { 40, 50, 60, 10, 20, 30 } x
+        printArray(b); // This Should Print: { 40, 50, 60, 10, 20, 30 }
         
         System.out.println("\n///// TEST 06: Shift Right k cell example /////");
         b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 }
         b=shiftRight(b,3);
-        printArray(b);  // This Should Print: { 0, 0, 0, 10, 20, 30 } x
+        printArray(b);  // This Should Print: { 0, 0, 0, 10, 20, 30 }
         
         System.out.println("\n///// TEST 07: Rotate Right k cell example /////");
         b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 }
         b = rotateRight(b,3);
-        printArray(b); // This Should Print: { 40, 50, 60, 10, 20, 30 } x
+        printArray(b); // This Should Print: { 40, 50, 60, 10, 20, 30 }
         
         
         System.out.println("\n///// TEST 08: Insert example 1 /////");
