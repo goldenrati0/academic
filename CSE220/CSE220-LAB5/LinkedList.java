@@ -55,7 +55,7 @@ public class LinkedList {
 
 		int indexmanager = 0;
 
-		if (indexmanager > this.nodeCount || indexmanager < 0) {
+		if (idx > this.nodeCount || idx < 0) {
 
 			return null;
 		} else {
@@ -81,7 +81,7 @@ public class LinkedList {
 
 		int indexmanager = 0;
 
-		if (indexmanager > this.nodeCount || indexmanager < 0) {
+		if (idx > this.nodeCount || idx < 0) {
 
 			return null;
 		} else {
@@ -110,7 +110,7 @@ public class LinkedList {
 		
 		int indexmanager = 0;
 		
-		if(indexmanager > this.nodeCount || indexmanager < 0){
+		if(idx > this.nodeCount || idx < 0){
 			
 			return null;
 		}else{
@@ -225,7 +225,9 @@ public class LinkedList {
 			
 			newNode.next = this.head;
 			this.head = newNode;
-		}else{
+			
+			this.nodeCount++;
+		}else if(idx>0 && idx<this.nodeCount){
 			
 			Node pred;
 			Node newNode;
@@ -235,11 +237,12 @@ public class LinkedList {
 				
 				if(indexManager == idx){
 					
-					pred = this.nodeAt(indexManager-1);
+					pred = nodeAt(indexManager-1);
 					newNode = new Node(elem, null);
 					
 					newNode.next = pred.next;
 					pred.next = newNode;
+					this.nodeCount++;
 					break;
 				}else{
 					
@@ -247,6 +250,13 @@ public class LinkedList {
 				}
 				
 			}
+		}else if(idx == this.nodeCount){
+			
+			Node pred = nodeAt(idx-1);
+			Node newNode = new Node(elem, null);
+			
+			pred.next = newNode;
+			this.nodeCount++;
 		}
 	}
 
@@ -273,6 +283,8 @@ public class LinkedList {
 				removeNode.next = null;
 				removeNode = null;
 				
+				this.nodeCount--;
+				
 				return elem;
 			}else{
 				
@@ -292,6 +304,8 @@ public class LinkedList {
 						removeNode.element = null;
 						removeNode.next = null;
 						removeNode = null;
+						
+						this.nodeCount--;
 						
 						return elem;
 					}else{
