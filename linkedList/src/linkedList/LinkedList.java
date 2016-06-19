@@ -330,12 +330,49 @@ public class LinkedList {
 
 	// Rotates the list to the left by 1 position.
 	public void rotateLeft() {
-		// TO DO
+		
+		Node firstNode = this.head;;
+		Node succNode = this.head.next;
+		Node lastNode = null;
+		
+		for(Node n=head; n!=null; n=n.next){
+			
+			if( n.next == null ){
+				
+				lastNode = n;
+			}
+		}
+		
+		firstNode.next = null;
+		lastNode.next = firstNode;
+		this.head = succNode;
+		
 	}
 
 	// Rotates the list to the right by 1 position.
 	public void rotateRight() {
-		// TO DO
+		
+		Node lastNode = null;
+		Node predNode = null;
+		
+		int indexManager = 0;
+		
+		for(Node n=head; n!=null; n=n.next){
+			
+			if( n.next == null ){
+				
+				lastNode = n;
+				predNode = nodeAt(indexManager - 1);
+			}else{
+				
+				indexManager++;
+			}
+		}
+		
+		lastNode.next = this.head;
+		this.head = lastNode;
+		predNode.next = null;
+		
 	}
 
 }
