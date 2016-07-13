@@ -47,3 +47,4 @@ Temporary Items
 .apdisk
 *.class
 *.java~
+/CSE220/CSE220-LAB7/ListStack/dist/
