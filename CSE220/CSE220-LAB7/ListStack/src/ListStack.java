@@ -67,6 +67,8 @@ public class ListStack implements Stack{
             rn.val=null;
             rn=null;
             
+            size--;
+            
             return val;
         }
     }

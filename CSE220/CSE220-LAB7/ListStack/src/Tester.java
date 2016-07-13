@@ -8,15 +8,16 @@
 
 /**
  *
- * @author BUCC MSP
+ * @author tahmid
  */
 public class Tester {
     
     public static void main(String[] args){
         
-        ListStack as = new ListStack();
-        
+         
         try{
+            
+            ListStack as = new ListStack();
             
             System.err.println("push() 5 times");
             as.push(10);
