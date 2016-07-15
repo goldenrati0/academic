@@ -1,0 +1,390 @@
+<html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unit Test Results: cse220.assign2.LinkedListTest</title>
+<link rel="stylesheet" type="text/css" title="Style" href="../../stylesheet.css">
+<script type="text/javascript" language="JavaScript">
+        var TestCases = new Array();
+        var cur;
+        
+    cur = TestCases['cse220.assign2.LinkedListTest'] = new Array();
+    
+        cur['ant.core.lib'] = '/usr/share/ant/lib/ant.jar';
+    
+        cur['ant.file'] = '/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution/build.xml';
+    
+        cur['ant.file.cse220'] = '/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution/build.xml';
+    
+        cur['ant.file.type'] = 'file';
+    
+        cur['ant.file.type.cse220'] = 'file';
+    
+        cur['ant.home'] = '/usr/share/ant';
+    
+        cur['ant.java.version'] = '1.6';
+    
+        cur['ant.library.dir'] = '/usr/share/ant/lib';
+    
+        cur['ant.project.default-target'] = 'compile';
+    
+        cur['ant.project.invoked-targets'] = 'run-tests';
+    
+        cur['ant.project.name'] = 'cse220';
+    
+        cur['ant.version'] = 'Apache Ant(TM) version 1.8.2 compiled on November 19 2011';
+    
+        cur['awt.nativeDoubleBuffering'] = 'true';
+    
+        cur['awt.toolkit'] = 'apple.awt.CToolkit';
+    
+        cur['basedir'] = '/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution';
+    
+        cur['build.dir'] = '/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution/bin';
+    
+        cur['doc.dir'] = '/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution/doc';
+    
+        cur['env.__CF_USER_TEXT_ENCODING'] = '0x1F7:0:0';
+    
+        cur['env.ac_cv_path_INTLTOOL_PERL'] = '/usr/bin/perl';
+    
+        cur['env.Apple_PubSub_Socket_Render'] = '/tmp/launch-ZZmuep/Render';
+    
+        cur['env.CLASSPATH'] = '/sw/share/java/svn-javahl/svn-javahl.jar:.';
+    
+        cur['env.com.apple.java.jvmMode'] = 'client';
+    
+        cur['env.com.apple.java.jvmTask'] = 'CommandLine_Manual.java';
+    
+        cur['env.COMMAND_MODE'] = 'unix2003';
+    
+        cur['env.CVS_RSH'] = 'ssh';
+    
+        cur['env.DBUS_SESSION_BUS_ADDRESS'] = 'unix:path=/tmp/dbus-qIr3onVrLZ,guid=4855d96da6f241c992f12b574fc441a2';
+    
+        cur['env.DISPLAY'] = '/tmp/launch-bjDjdV/org.x:0';
+    
+        cur['env.FTP_PASSIVE'] = '1';
+    
+        cur['env.ftp_proxy'] = 'http://192.168.1.15:8080/';
+    
+        cur['env.FTP_PROXY'] = 'http://192.168.1.15:8080/';
+    
+        cur['env.GDK_USE_XFT'] = '1';
+    
+        cur['env.HOME'] = '/Users/mumit';
+    
+        cur['env.http_proxy'] = 'http://192.168.1.15:8080/';
+    
+        cur['env.HTTP_PROXY'] = 'http://192.168.1.15:8080/';
+    
+        cur['env.https_proxy'] = 'http://192.168.1.15:8080/';
+    
+        cur['env.INFOPATH'] = '/sw/share/info:/sw/info:/usr/share/info';
+    
+        cur['env.JAVA_MAIN_CLASS_45287'] = 'org.apache.tools.ant.launch.Launcher';
+    
+        cur['env.LADSPA_PATH'] = '/sw/lib/ladspa';
+    
+        cur['env.LC_CTYPE'] = 'UTF-8';
+    
+        cur['env.LOGNAME'] = 'mumit';
+    
+        cur['env.MANPATH'] = '/sw/share/man::/Users/mumit/local/perl/man:/sw/lib/perl5/5.10.0/man:/usr/X11R6/man:/sw/lib/perl5-core/5.8.6/man:/sw/lib/perl5/5.8.6/man:/sw/lib/perl5-core/5.8.8/man:/sw/lib/perl5/5.8.8/man';
+    
+        cur['env.NLTK_DATA'] = '/usr/share/nltk';
+    
+        cur['env.PATH'] = '/sw/bin:/sw/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/mumit/local/bin:/usr/local/bin:/usr/local/mysql5/bin:/usr/local/graphviz-2.12/bin:/usr/X11R6/bin';
+    
+        cur['env.PERL5LIB'] = '/sw/lib/perl5:/sw/lib/perl5/darwin:/Users/mumit/local/perl/lib';
+    
+        cur['env.PWD'] = '/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution';
+    
+        cur['env.PYTHONPATH'] = '/sw/Library/Python/2.5/site-packages';
+    
+        cur['env.QTDIR'] = '/sw/lib/qt3';
+    
+        cur['env.SGML_CATALOG_FILES'] = '/sw/etc/sgml/catalog';
+    
+        cur['env.SHELL'] = '/bin/bash';
+    
+        cur['env.SHLVL'] = '1';
+    
+        cur['env.SSH_AUTH_SOCK'] = '/tmp/launch-H44MOo/Listeners';
+    
+        cur['env.TERM'] = 'xterm-color';
+    
+        cur['env.TERM_PROGRAM'] = 'Apple_Terminal';
+    
+        cur['env.TERM_PROGRAM_VERSION'] = '273.1';
+    
+        cur['env.TMPDIR'] = '/var/folders/F1/F1RHG2vLFzSvd4wGrlsYFk+++TQ/-Tmp-/';
+    
+        cur['env.USER'] = 'mumit';
+    
+        cur['env.VERSIONER_PERL_PREFER_32_BIT'] = 'yes';
+    
+        cur['env.XAPPLRESDIR'] = '/sw/etc/app-defaults/';
+    
+        cur['env.XDG_CACHE_HOME'] = '/Users/mumit/.cache';
+    
+        cur['env.XDG_CONFIG_DIRS'] = '/sw/etc/xdg';
+    
+        cur['env.XDG_CONFIG_HOME'] = '/Users/mumit/.config';
+    
+        cur['env.XDG_DATA_DIRS'] = '/sw/share';
+    
+        cur['env.XDG_DATA_HOME'] = '/Users/mumit/.local/share';
+    
+        cur['env.XML_CATALOG_FILES'] = '/sw/etc/xml/catalog';
+    
+        cur['file.encoding'] = 'MacRoman';
+    
+        cur['file.encoding.pkg'] = 'sun.io';
+    
+        cur['file.separator'] = '/';
+    
+        cur['ftp.nonProxyHosts'] = 'localhost|*.localhost|local|*.local|169.254/16|*.169.254/16|192.168/16|*.192.168/16|mail.bracu.ac.bd|*.mail.bracu.ac.bd|student.bracu.ac.bd|*.student.bracu.ac.bd|faculty.bracu.ac.bd|*.faculty.bracu.ac.bd|moodle.bracu.ac.bd|*.moodle.bracu.ac.bd|www.bracu.ac.bd|*.www.bracu.ac.bd|crblp.bracu.ac.bd|*.crblp.bracu.ac.bd|library.bracu.ac.bd|*.library.bracu.ac.bd';
+    
+        cur['ftp.proxyHost'] = 'proxy.bracu.ac.bd';
+    
+        cur['ftp.proxyPort'] = '8080';
+    
+        cur['gopherProxySet'] = 'false';
+    
+        cur['http.nonProxyHosts'] = 'localhost|*.localhost|local|*.local|169.254/16|*.169.254/16|192.168/16|*.192.168/16|mail.bracu.ac.bd|*.mail.bracu.ac.bd|student.bracu.ac.bd|*.student.bracu.ac.bd|faculty.bracu.ac.bd|*.faculty.bracu.ac.bd|moodle.bracu.ac.bd|*.moodle.bracu.ac.bd|www.bracu.ac.bd|*.www.bracu.ac.bd|crblp.bracu.ac.bd|*.crblp.bracu.ac.bd|library.bracu.ac.bd|*.library.bracu.ac.bd';
+    
+        cur['http.proxyHost'] = '192.168.1.15';
+    
+        cur['http.proxyPort'] = '8080';
+    
+        cur['java.awt.graphicsenv'] = 'apple.awt.CGraphicsEnvironment';
+    
+        cur['java.awt.printerjob'] = 'apple.awt.CPrinterJob';
+    
+        cur['java.class.path'] = '/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution/bin:/sw/share/java/svn-javahl/svn-javahl.jar:/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution:/Users/mumit/.ant/lib/junit-3.8.1.jar:/usr/share/java/ant-1.8.2/lib/ant-launcher.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar';
+    
+        cur['java.class.version'] = '50.0';
+    
+        cur['java.endorsed.dirs'] = '/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed';
+    
+        cur['java.ext.dirs'] = '/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext';
+    
+        cur['java.home'] = '/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home';
+    
+        cur['java.io.tmpdir'] = '/var/folders/F1/F1RHG2vLFzSvd4wGrlsYFk+++TQ/-Tmp-/';
+    
+        cur['java.library.path'] = '.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java';
+    
+        cur['java.runtime.name'] = 'Java(TM) SE Runtime Environment';
+    
+        cur['java.runtime.version'] = '1.6.0_31-b04-415-10M3635';
+    
+        cur['java.specification.name'] = 'Java Platform API Specification';
+    
+        cur['java.specification.vendor'] = 'Sun Microsystems Inc.';
+    
+        cur['java.specification.version'] = '1.6';
+    
+        cur['java.vendor'] = 'Apple Inc.';
+    
+        cur['java.vendor.url'] = 'http://www.apple.com/';
+    
+        cur['java.vendor.url.bug'] = 'http://bugreport.apple.com/';
+    
+        cur['java.version'] = '1.6.0_31';
+    
+        cur['java.vm.info'] = 'mixed mode';
+    
+        cur['java.vm.name'] = 'Java HotSpot(TM) 64-Bit Server VM';
+    
+        cur['java.vm.specification.name'] = 'Java Virtual Machine Specification';
+    
+        cur['java.vm.specification.vendor'] = 'Sun Microsystems Inc.';
+    
+        cur['java.vm.specification.version'] = '1.0';
+    
+        cur['java.vm.vendor'] = 'Apple Inc.';
+    
+        cur['java.vm.version'] = '20.6-b01-415';
+    
+        cur['jikes.class.path'] = ':/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/alt-rt.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/alt-string.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/charsets.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/classes.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/dt.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/jconsole.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/management-agent.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/ui.jar';
+    
+        cur['junit.output.dir'] = 'junit';
+    
+        cur['line.separator'] = '
+';
+    
+        cur['mrj.build'] = '10M3635';
+    
+        cur['mrj.version'] = '1060.1.6.0_31-415';
+    
+        cur['os.arch'] = 'x86_64';
+    
+        cur['os.name'] = 'Mac OS X';
+    
+        cur['os.version'] = '10.6.8';
+    
+        cur['path.separator'] = ':';
+    
+        cur['socksNonProxyHosts'] = 'localhost|*.localhost|local|*.local|169.254/16|*.169.254/16|192.168/16|*.192.168/16|mail.bracu.ac.bd|*.mail.bracu.ac.bd|student.bracu.ac.bd|*.student.bracu.ac.bd|faculty.bracu.ac.bd|*.faculty.bracu.ac.bd|moodle.bracu.ac.bd|*.moodle.bracu.ac.bd|www.bracu.ac.bd|*.www.bracu.ac.bd|crblp.bracu.ac.bd|*.crblp.bracu.ac.bd|library.bracu.ac.bd|*.library.bracu.ac.bd';
+    
+        cur['src.dir'] = '/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution/src';
+    
+        cur['sun.arch.data.model'] = '64';
+    
+        cur['sun.boot.class.path'] = '/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar';
+    
+        cur['sun.boot.library.path'] = '/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries';
+    
+        cur['sun.cpu.endian'] = 'little';
+    
+        cur['sun.cpu.isalist'] = '';
+    
+        cur['sun.io.unicode.encoding'] = 'UnicodeLittle';
+    
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner cse220.assign2.LinkedListTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution/junit/TEST-cse220.assign2.LinkedListTest.xml crashfile=/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution/junitvmwatcher6280179977521074337.properties propsfile=/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution/junit5029175410864626960.properties';
+    
+        cur['sun.java.launcher'] = 'SUN_STANDARD';
+    
+        cur['sun.jnu.encoding'] = 'MacRoman';
+    
+        cur['sun.management.compiler'] = 'HotSpot 64-Bit Tiered Compilers';
+    
+        cur['sun.os.patch.level'] = 'unknown';
+    
+        cur['testsuite.dir'] = '/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution/testsuite';
+    
+        cur['user.country'] = 'US';
+    
+        cur['user.dir'] = '/Users/mumit/src/BU/CSE-220/Summer-12/assign2/solution';
+    
+        cur['user.home'] = '/Users/mumit';
+    
+        cur['user.language'] = 'en';
+    
+        cur['user.name'] = 'mumit';
+    
+        cur['user.timezone'] = '';
+    </script><script type="text/javascript" language="JavaScript">
+        function displayProperties (name) {
+          var win = window.open('','JUnitSystemProperties','scrollbars=1,resizable=1');
+          var doc = win.document;
+          doc.open();
+          doc.write("<html><head><title>Properties of " + name + "</title>");
+          doc.write("<style type=\"text/css\">");
+          doc.write("body {font:normal 68% verdana,arial,helvetica; color:#000000; }");
+          doc.write("table tr td, table tr th { font-size: 68%; }");
+          doc.write("table.properties { border-collapse:collapse; border-left:solid 1 #cccccc; border-top:solid 1 #cccccc; padding:5px; }");
+          doc.write("table.properties th { text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#eeeeee; }");
+          doc.write("table.properties td { font:normal; text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#fffffff; }");
+          doc.write("h3 { margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica }");
+          doc.write("</style>");
+          doc.write("</head><body>");
+          doc.write("<h3>Properties of " + name + "</h3>");
+          doc.write("<div align=\"right\"><a href=\"javascript:window.close();\">Close</a></div>");
+          doc.write("<table class='properties'>");
+          doc.write("<tr><th>Name</th><th>Value</th></tr>");
+          for (prop in TestCases[name]) {
+            doc.write("<tr><th>" + prop + "</th><td>" + TestCases[name][prop] + "</td></tr>");
+          }
+          doc.write("</table>");
+          doc.write("</body></html>");
+          doc.close();
+          win.focus();
+        }
+      
+      </script>
+</head>
+<body>
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org/">JUnit</a> and <a href="http://ant.apache.org/">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h3>Class cse220.assign2.LinkedListTest</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
+</tr>
+<tr valign="top" class="Pass">
+<td><a title="Display all tests" href="1_LinkedListTest.html">LinkedListTest</a></td><td><a title="Display all tests" href="1_LinkedListTest.html">21</a></td><td>0</td><td>0</td><td>0.139</td><td>2012-06-04T05:15:23</td><td>mumit.bracu.ac.bd</td>
+</tr>
+</table>
+<h2>Tests</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testLinkedList"></a>testLinkedList</td><td>Success</td><td></td><td>0.004</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testSize"></a>testSize</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testIsEmpty"></a>testIsEmpty</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContains"></a>testContains</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testIndexOf"></a>testIndexOf</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testLastIndexOf"></a>testLastIndexOf</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testAddObject"></a>testAddObject</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testAddIntObject"></a>testAddIntObject</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testAddAll"></a>testAddAll</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testRemoveInt"></a>testRemoveInt</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testRemoveObject"></a>testRemoveObject</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testClear"></a>testClear</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testGet"></a>testGet</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testSet"></a>testSet</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testReverse"></a>testReverse</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testShiftRight"></a>testShiftRight</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testShiftLeft"></a>testShiftLeft</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testCopy"></a>testCopy</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testToString"></a>testToString</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testToArray"></a>testToArray</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testEqualsObject"></a>testEqualsObject</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('cse220.assign2.LinkedListTest');">
+                    Properties &raquo;
+                </a>
+</div>
+</body>
+</html>

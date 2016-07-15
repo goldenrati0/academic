@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!-- build.xml - a simple Ant buildfile for CSE 220 -->
+<project name="cse220" default="compile" basedir=".">
+  <property environment="env"/>
+  <property name="src.dir" value="${basedir}/src"/>
+  <property name="testsuite.dir" value="${basedir}/testsuite"/>
+  <property name="build.dir" value="${basedir}/bin"/>
+  <property name="doc.dir" value="${basedir}/doc"/>
+  <property name="junit.output.dir" value="junit"/>
+  <path id="class.path" path="${build.dir}"/>
+  
+  <!-- initialize by creating various directories as needed. -->
+  <target name="init">
+    <!-- nothing needs to be done here. -->
+  </target>
+
+  <!-- pasing target to generate Zava parser. -->
+  <target name="compile" depends="init"
+          description="generating code">
+    <mkdir dir="${build.dir}"/>
+    <javac deprecation="false" srcdir="${src.dir}" destdir="${build.dir}"/>
+    <!-- <javac deprecation="false" srcdir="${testsuite.dir}" destdir="${build.dir}"/> -->
+  </target>
+
+  <!-- create doc. -->
+  <target name="javadoc" depends="init"
+          description="Create java documentation.">
+    <mkdir dir="${doc.dir}"/>
+    <javadoc access="public" author="true" 
+	     destdir="${doc.dir}" nodeprecated="false" nodeprecatedlist="false" 
+	     noindex="false" nonavbar="false" notree="false" 
+	     packagenames="cse220.*" 
+	     source="1.5" sourcepath="${src.dir}" 
+	     splitindex="true" use="true" version="true">
+      <link href="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+    </javadoc>
+  </target>
+
+  <!-- clean target to delete all temporary things. -->
+  <target name="clean" description="Removes all generated files.">
+    <!-- <delete dir="${build.dir}"/> -->
+    <delete dir="${build.dir}"/>
+    <delete dir="${doc.dir}"/>
+  </target>
+
+  <target name="junitreport">
+      <junitreport todir="${junit.output.dir}">
+	  <fileset dir="${junit.output.dir}">
+	      <include name="TEST-*.xml"/>
+	  </fileset>
+	  <report format="frames" todir="${junit.output.dir}"/>
+      </junitreport>
+  </target>
+  <!-- run junit tests. -->
+  <target name="run-tests" description="Run test cases"
+	  depends="compile">
+    <mkdir dir="${junit.output.dir}"/>
+    <junit fork="yes" printsummary="withOutAndErr" showoutput="yes">
+      <formatter type="xml"/>
+      <classpath>
+	<pathelement location="${build.dir}"/>
+	<path refid="class.path"/>
+      </classpath>
+      <batchtest todir="${junit.output.dir}">
+	<fileset dir="bin">
+	  <include name="**/*Test*.class"/>
+	</fileset>
+      </batchtest>
+    </junit>
+    <antcall target="junitreport"/>
+  </target>
+
+</project>
+

@@ -1,0 +1,28 @@
+[ help me ]
+equal = true
+equal = false
+equal = true
+a[0] = 0
+a[1] = 1
+a[2] = 2
+a[3] = 3
+a[4] = 4
+Array a = [ 0 1 2 3 4 ]
+Array a = [ 199 133 2 3 4 ]
+Array a = [ -17 199 -13 133 2 3 4 ]
+Array a = [ -17 199 133 2 3 4 ]
+Array a = [ -17 199 133 3 4 ]
+Array a = [ -17 199 133 3 4 ]
+Array a contains 133.
+Index of 133 = 2
+Last index of 133 = 2
+Array returned from Array a = [-17, 199, 133, 3, 4]
+Array a = [ ]
+Caught exception: java.lang.IndexOutOfBoundsException
+Caught exception: java.lang.IndexOutOfBoundsException
+b = [ -17 199 133 3 4 ]
+reverse(b) = [ 4 3 133 199 -17 ]
+shiftRight(b, 1) = [ null 4 3 133 199 -17 ]
+shiftLeft(b, 1) = [ 4 3 133 199 -17 ]
+shiftRight(b, 4) = [ null null null null 4 3 133 199 -17 ]
+shiftLeft(b, 4) = [ 4 3 133 199 -17 ]
