@@ -459,9 +459,14 @@ public class ArrayList implements List {
         
         ArrayList copyArrayList = new ArrayList(this.size);
         
+//        for(int i=0; i<copyArrayList.data.length; i++){
+//        
+//            copyArrayList.data[i] = this.data[i];
+//        }
         
+        copyArrayList.addAll(this);
         
-        return null;
+        return copyArrayList;
     }
     
     /**
