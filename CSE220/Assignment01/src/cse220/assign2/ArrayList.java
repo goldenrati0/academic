@@ -113,18 +113,17 @@ public class ArrayList implements List {
      *         the element
      */
     public int lastIndexOf(Object e) {
-        
-        int lastIndex = -1;
-        
-        for(int i=0; i<data.length; i++){
-            
-            if(data[i].equals(e)){
-                
-                lastIndex = i;
+        for(int i = size()-1; i>=0; i--){
+            if((data[i]).equals(e)){
+                return i;
             }
         }
-        
-        return lastIndex;
+                
+ // TODO
+ // 1. Iterate through elements using a counter, and remember the
+ //    last index where the element was seen. 
+ // 2. Return the last seen index if found, or -1 otherwise.
+ return -1;   // TODO: REMOVE THIS LINE!
     }
     
     /**
@@ -239,7 +238,7 @@ public class ArrayList implements List {
             Object val = data[index];
             
             
-            for(int i=index; i<data.length; i++){
+            for(int i=index; i<data.length-1; i++){
                 
                 data[i] = data[i+1];
             }
@@ -262,22 +261,25 @@ public class ArrayList implements List {
      *         otherwise
      */
     public boolean remove(Object e) {
-        // TODO
-        // We first find the element's position (the first occurrence),
-        // and then remove it using remove(index) method. Of course, 
-        // the element may not exist in this list, and which case, 
-        // we simply return false.
-   
-   for(int i=0; i<data.length; i++){
-
-    if(data[i].equals(e)){
-
-     remove(i);
-     return true;
-    }
-   }
-
-   return false;
+        int index =0;
+        boolean value = false;
+        int count = 0;
+        for(int i =0; i<data.length; i++){
+            if(data[i] == e){
+                index = i;
+                count = 1;
+                
+                break;
+            }
+        }
+        if(count == 1){
+        remove(index);
+        value = true;
+        }
+        if(count == 0){
+            value = false;
+        }
+        return value;
     }
     
     /**
@@ -363,15 +365,15 @@ public class ArrayList implements List {
         //    j starting at size-1 (moving backwards)
         // 2. Swap the elements until i is larger than j
 
-        int i = 0;
-        int j = this.size-1;
-
-        while(i<j){
-
-         Object val = data[i];
-         data[i] = data[j];
-         data[j] = val;
-        }
+//        int i = 0;
+//        int j = this.size-1;
+//
+//        while(i<j){
+//
+//         Object val = data[i];
+//         data[i] = data[j];
+//         data[j] = val;
+//        }
     }
     
     /**
@@ -481,7 +483,15 @@ public class ArrayList implements List {
         // look at assignment 1, you'll know how to do this.
         // The StringBuffer class is really the correct way to "build up"
         // a string element at a time, but I'll accept any correct answer.
-        return null;   // TODO: REMOVE THIS LINE!
+        
+        String s = "";
+        
+        for(int i=0; i<size; i++){
+            
+            s = s + data[i] + " ";
+        }
+        
+        return "[ " + s + "]";
     }
     
     /**
@@ -497,7 +507,15 @@ public class ArrayList implements List {
         // will return an array containing two elements. Create an array
         // of "size" capacity, and iterate over the elements of this 
         // sequence, adding each to the output array.
-        return null;   // TODO: REMOVE THIS LINE!
+        
+        Object[] x = new Object[this.size];
+        
+        for(int i=0; i<x.length; i++){
+        
+            x[i] = data[i];
+        }
+        
+        return x;
     }
     
     /**
