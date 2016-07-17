@@ -32,10 +32,12 @@ public class ListQueue implements Queue {
         Node add = new Node(o, null);
 
         if (front == null) {
+        	
             front = add;
             rear = front;
             size++;
         }else{
+        	
             rear.next = add;
             rear = add;
             size++;
