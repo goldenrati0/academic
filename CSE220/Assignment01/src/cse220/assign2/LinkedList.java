@@ -167,27 +167,38 @@ public class LinkedList implements List {
      *             (index &lt; 0 || index &gt; size())
      */
     public void add(int index, Object e) throws IndexOutOfBoundsException {
+        
         if(index <0 || index>size()){
             throw new IndexOutOfBoundsException();
         }
+        
         int indexM = 0;
         Node p= null;
+        
         // basic nodeAt method to return node at the specified index
+        
         for(Node n = header.next; n!= header; n= n.next){
             if(indexM == index){
                 
                 p = n;
+                break;
             }
             else{
                 indexM++;
             }
         }
+        
         Node notun = new Node(e, null, null); // create new Node
-        Node q = p.next;// adreesing the next node of p
-        notun.next = q;
-        notun.prev = p;
-        p.next = notun;
-        q.prev = notun;
+//        Node q = p.next; // adreesing the next node of p
+//        notun.next = q;
+//        notun.prev = p;
+//        p.next = notun;
+//        q.prev = notun;
+        
+        p.prev.next = notun;
+        notun.prev = p.prev;
+        notun.next = p;
+        p.prev = notun;
         size++;
         
         
@@ -265,6 +276,7 @@ public class LinkedList implements List {
         if (index < 0 || index > size()) {
             throw new IndexOutOfBoundsException();
         }
+        
         Node n = nodeAt(index);
         Node p = n.prev; // reference to predecessor
         Node q = n.next; // reference to successor
@@ -294,25 +306,34 @@ public class LinkedList implements List {
      *         otherwise
      */
     public boolean remove(Object e) {
+        
         Node p = null;
         boolean value = false;
         
         // contains method checks if the given element is in the list
         if(contains(e)){
+            
             size--;
+            
             // find out the node
             for(Node n = header.next; n!= header; n = n.next){
-                if(n.element ==e){
+                
+                if(n.element == e){
                     
                     p = n;
+                    
                     Node q = p.next;
                     Node r = p.prev;
+                    
                     r.next = q;
                     q.prev = r;
+                    
                     p.element = null;
                     p.next = null;
                     p.prev = null;
+                    
                     value = true;
+                    
                     break;
                 }
             }
@@ -320,6 +341,7 @@ public class LinkedList implements List {
         else{
             value = false;
         }
+        
         return value;
         
     }
@@ -341,9 +363,10 @@ public class LinkedList implements List {
      * after this method returns.
      */
     public void clear() {
+        
         header.next = header;
         header.prev = header;
-        size =0;
+        size = 0;
         // TODO
         // Two ways of doing this:
         // 1. Easy, but ok for cse220, way: set header's next and prev
@@ -364,9 +387,11 @@ public class LinkedList implements List {
      *             (index &lt; 0 || index &ge; size())
      */
     public Object get(int index) throws IndexOutOfBoundsException {
+        
         if(index <0 || index>size()){
             throw new IndexOutOfBoundsException();
         }
+        
         Node p = nodeAt(index);
         Object temp = p.element;
         // 1. Check if index is within bounds, or else throw exception.
@@ -386,9 +411,11 @@ public class LinkedList implements List {
      *             (index &lt; 0 || index &ge; size())
      */
     public Object set(int index, Object e) throws IndexOutOfBoundsException {
+        
         if(index <0 || index>size()){
             throw new IndexOutOfBoundsException();
         }
+        
         Node p = nodeAt(index);
         Object temp = p.element;
         p.element = e;
