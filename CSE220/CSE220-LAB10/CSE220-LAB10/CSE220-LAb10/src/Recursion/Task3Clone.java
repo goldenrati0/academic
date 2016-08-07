@@ -5,6 +5,8 @@
  */
 package Recursion;
 
+import java.util.Arrays;
+
 /**
  *
  * @author tahmid
@@ -14,12 +16,25 @@ public class Task3Clone {
     public static void main(String[] args){
         
         int[] x = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] y = {54, 657, 78, 456, 19, 9};
         
-        System.out.println(binarySearch(x, 0, 9, 8));
+        try{
+            System.out.println(binarySearch(x, 0, 9, 8));
+            System.out.println(binarySearch(y, 0, 5, 19));
+        }catch(Exception e){
+            System.out.println(e);
+        }
         
     }
     
-    public static int binarySearch(int[] x, int start, int end, int target){
+    public static int binarySearch(int[] x, int start, int end, int target) throws ArrayNotSortedException {
+        
+        int[] temp = x.clone();
+        Arrays.sort(temp);
+        
+        if(!Arrays.equals(x, temp)){
+            throw new ArrayNotSortedException();
+        }
         
         if(start>end){
             return -1;
