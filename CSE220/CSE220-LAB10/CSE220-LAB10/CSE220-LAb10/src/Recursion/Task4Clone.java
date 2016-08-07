@@ -11,8 +11,6 @@ package Recursion;
  */
 public class Task4Clone {
     
-    private static String binaryString = "";
-    
     public static void main(String[] args){
         
         toBinary(12);
