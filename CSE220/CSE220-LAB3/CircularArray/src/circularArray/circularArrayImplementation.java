@@ -188,7 +188,23 @@ public class circularArrayImplementation {
      * Valid range of pos--> 0 to size-1
      */
     public void removeByLeftShift(int pos) {
-        //TO DO
+        
+        if(pos<0 || pos>=this.size){
+            System.out.println("Invalid index to remove");
+        }else{
+            
+            int tempIndexManager = this.start + pos;
+            
+            for(int i=pos; i<this.cir.length; i++){
+                
+                this.cir[(tempIndexManager)%this.cir.length] = this.cir[(tempIndexManager+1)%this.cir.length];
+                tempIndexManager++;
+            }
+            
+            this.cir[(this.start-1)%this.cir.length] = null;
+            this.size--;
+            
+        }
     }
 
     /* parameter--> pos. pos --> position relative to start.
