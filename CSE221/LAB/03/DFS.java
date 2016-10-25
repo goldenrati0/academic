@@ -1,5 +1,5 @@
 /*
- * DFS with recursion
+ * DFS with recursion and without Stack
  */
 
 import java.util.Scanner;
