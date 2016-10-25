@@ -26,7 +26,7 @@ public class DFS {
 
 		boolean[] visited = new boolean[node];
 
-		dfs_travers(4, adjMatrix, visited);
+		dfs_travers(2, adjMatrix, visited);
 		System.out.println();
 	}
 
