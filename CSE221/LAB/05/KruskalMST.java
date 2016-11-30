@@ -55,7 +55,7 @@ public class KruskalMST {
                         added[temp.endNode] = true;
                     }
 
-                    vertexCollection[i].visited = true; // mark the ENDGE as VISITED
+                    vertexCollection[i].visited = true; // mark the EDGE as VISITED
                 }
             }
         }
