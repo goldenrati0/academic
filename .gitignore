@@ -4,6 +4,7 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
+.idea/
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
@@ -13,6 +14,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*.iml
 
 # Windows shortcuts
 *.lnk
