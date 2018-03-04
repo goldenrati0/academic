@@ -3,15 +3,16 @@ package bd.ac.bracu.compiler;
 import bd.ac.bracu.compiler.evaluator.Evaluator;
 import bd.ac.bracu.compiler.evaluator.OperandValueException;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws OperandValueException {
-        Scanner ana = new Scanner(System.in);
+    public static void main(String[] args) throws OperandValueException, FileNotFoundException {
+        Scanner ana = new Scanner(new File("input.txt"));
 
-        System.out.println("Number of Key-Value Pairs");
         int n = ana.nextInt();
         ana.nextLine();
 
@@ -19,21 +20,18 @@ public class Main {
         List<Integer> values = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            System.out.println("Key-Value Pair #" + (i + 1));
             String temp = ana.nextLine();
             String tempAr[] = temp.split("=");
             keys.add(tempAr[0].trim());
             values.add(Integer.parseInt(tempAr[1].trim()));
         }
 
-        System.out.println("Number of expression");
         n = ana.nextInt();
         ana.nextLine();
 
         List<String> expressions = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            System.out.println("Expression #" + (i + 1));
             expressions.add(ana.nextLine());
         }
 
