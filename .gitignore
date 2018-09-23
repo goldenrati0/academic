@@ -1,5 +1,7 @@
 # Manual ignore
 .ipynb_checkpoints/
+*.jar
+*.iml
 
 # Created by .ignore support plugin (hsz.mobi)
 ### VisualStudio template
