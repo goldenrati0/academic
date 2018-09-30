@@ -34,12 +34,20 @@ class ThirdGLEventListener implements GLEventListener {
 
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
 
-        drawLine(gl, 0, 0, 100, 0);
-        drawLine(gl, 50, -50, 50, 50);
-        drawLine(gl, 50, 50, 80, 50);
-        drawLine(gl, 50, -50, 20, -50);
-        drawLine(gl, 100, 0, 100, -25);
-        drawLine(gl, 0, 0, 0, 25);
+//        drawLine(gl, 0, 0, 100, 0);
+//        drawLine(gl, 50, -50, 50, 50);
+//        drawLine(gl, 50, 50, 100, 50);
+//        drawLine(gl, 50, -50, 0, -50);
+//        drawLine(gl, 100, 0, 100, -50);
+//        drawLine(gl, 0, 0, 0, 50);
+
+        drawLine(gl, 50, 125, 100, 75);
+        drawLine(gl, 50, 75, 100, 125);
+        drawLine(gl, 50, 125, 25, 100);
+        drawLine(gl, 100, 125, 75, 150);
+        drawLine(gl, 100, 75, 125, 100);
+        drawLine(gl, 50, 75, 75, 50);
+
     }
 
     public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
