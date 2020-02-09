@@ -12,14 +12,8 @@ class IdentifierParser(BaseParser):
         return self._get_pattern().findall(to_parse)
 
     def start_parsing(self):
-        while True:
-            line = self._file_reader.readline()
-            if not line:
-                break
-
-            parsed_data = self.parse(to_parse=line)
-            parsed_data = list(map(lambda d: d.split("=")[0].strip(), parsed_data))
-            self.parsed_data.extend(parsed_data)
+        super().start_parsing()
+        self.parsed_data = list(map(lambda d: d.split("=")[0].strip(), self.parsed_data))
 
     def get_parsed_data(self, file_reader: _io.TextIOWrapper) -> List:
         return sorted(
