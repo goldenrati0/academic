@@ -18,9 +18,11 @@ PARSER_MAP = {
 
 def _create_parser(to_parse):
     parsers = []
+    to_parse = list(
+        filter(lambda p: p in PARSER_MAP, to_parse)
+    )
     for parse in to_parse:
-        if parse in PARSER_MAP:
-            parsers.append(PARSER_MAP[parse]())
+        parsers.append(PARSER_MAP[parse]())
     return parsers
 
 
