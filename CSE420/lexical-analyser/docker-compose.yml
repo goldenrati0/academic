@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  lexical-analyser:
+    build:
+      context: .
+    volumes:
+      - .:/code
+    working_dir: /code
+    entrypoint: ["python", "run_parser.py"]
