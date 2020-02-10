@@ -8,9 +8,6 @@ class IdentifierParser(BaseParser):
     NAME = "ID"
     REGEX_STR = '[a-zA-Z]*[ ]?='
 
-    def parse(self, to_parse):
-        return self._get_pattern().findall(to_parse)
-
     def start_parsing(self):
         super().start_parsing()
         self.parsed_data = list(map(lambda d: d.split("=")[0].strip(), self.parsed_data))
